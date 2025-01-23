@@ -1,13 +1,18 @@
 test = {
   'name': 'Recap',
-  'points': 1,
+  'points': 0,
   'suites': [
     {
       'cases': [
         {
           'code': r"""
-          >>> print(4 * 3) # If there is an error, type Error
-          65bb2d579064080c04c18cd3c0115d46
+          >>> n = 3
+          >>> while n >= 1: # In case of infinite loop, type Infinite loop
+          ...     n = n - 1
+          ...     print(n)
+          904eef8e72d1fc3b59bf279bc0e834b2
+          d7b8f7bd8922caf9bcf430c46497c748
+          375261e19471b93a4b7bfff6c7b2238f
           # locked
           """,
           'hidden': False,
@@ -15,11 +20,11 @@ test = {
         },
         {
           'code': r"""
-          >>> x = 2
-          >>> y = 3
-          >>> x = (y + 1)*x 
-          >>> print(x) # If there is an error, type Error
-          d3141c32a6183c624135095bd0ca36c3
+          >>> n = 0.8
+          >>> while n <= 1: # In case of infinite loop, type Infinite loop
+          ...     n = n * n
+          ...     print(n)
+          72eae69a0db448e25437ef3c27f89b4c
           # locked
           """,
           'hidden': False,
@@ -27,9 +32,13 @@ test = {
         },
         {
           'code': r"""
-          >>> temp = 30
-          >>> print('Temp: ' + temp) # If there is an error, type Error
-          d3f6a67fafa33466c062dafdcbea2119
+          >>> def some_function(i):
+          ...     if type(i) == str:
+          ...         print('A string')
+          ...     else:
+          ...         print('Something else')
+          >>> some_function('Hello there!' + str(float('3.14')))
+          2e0d1ac5eb5e5f73a9a8a3e587fc9b8a
           # locked
           """,
           'hidden': False,
@@ -37,63 +46,6 @@ test = {
         }
       ],
       'scored': False,
-      'type': 'wwpp'
-    },
-    {
-      'cases': [
-        {
-          'code': r"""
-          >>> x = 8
-          >>> x < 5
-          d23093a9b21750634fea76dab9cc5b29
-          # locked
-          >>> x > 0 and x < 7
-          d23093a9b21750634fea76dab9cc5b29
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        },
-        {
-          'code': r"""
-          >>> name = 'Franz'
-          >>> if name == 'Franz':
-          ...     print('Hello ' + name)
-          62c0f79ccd3561f19c8526e216427490
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        },
-        {
-          'code': r"""
-          >>> y = 7
-          >>> while y > 0: # In case of infinite loop, type Infinite loop
-          ...     y = y // 2
-          ...     print(y)
-          481c14e7b4fa0619c65417e86cc17f91
-          6bbf77c4f4c29b992b7452b251b86eba
-          a5164d10af1418a8f3c230569c692e52
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        },
-        {
-          'code': r"""
-          >>> y = 2
-          >>> while y != 0: # In case of infinite loop, type Infinite loop
-          ...     y = y // 2
-          ...     print(y)
-          6bbf77c4f4c29b992b7452b251b86eba
-          a5164d10af1418a8f3c230569c692e52
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        }
-      ],
-      'scored': True,
       'type': 'wwpp'
     }
   ]

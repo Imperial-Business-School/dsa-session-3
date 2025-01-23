@@ -16,35 +16,32 @@ def run_ok_test(test_name):
     # If we didn't find the test
     assert False, f"Could not find score for {test_name}"
 
-def test_print_grade_0():
-    run_ok_test("test_ses02_solution_print_grade_0")
+def test_broken_factorial_0():
+    run_ok_test("test_ses03_solution_broken_factorial_0")
 
-def test_print_grade_1():
-    run_ok_test("test_ses02_solution_print_grade_1")
+def test_broken_factorial_1():
+    run_ok_test("test_ses03_solution_broken_factorial_1")
 
-def test_print_grade_2():
-    run_ok_test("test_ses02_solution_print_grade_2")
+def test_broken_factorial_2():
+    run_ok_test("test_ses03_solution_broken_factorial_2")
 
-def test_sum_of_squares_0():
-    run_ok_test("test_ses02_solution_sum_of_squares_0")
+def test_broken_factorial_3():
+    run_ok_test("test_ses03_solution_broken_factorial_3")
 
-def test_sum_of_squares_1():
-    run_ok_test("test_ses02_solution_sum_of_squares_1")
+def test_item_lengths_0():
+    run_ok_test("test_ses03_solution_item_lengths_0")
 
-def test_sum_of_squares_2():
-    run_ok_test("test_ses02_solution_sum_of_squares_2")
+def test_item_lengths_1():
+    run_ok_test("test_ses03_solution_item_lengths_1")
 
-def test_sum_of_squares_3():
-    run_ok_test("test_ses02_solution_sum_of_squares_3")
+def test_item_lengths_2():
+    run_ok_test("test_ses03_solution_item_lengths_2")
 
-def test_weeks_0():
-    run_ok_test("test_ses02_solution_weeks_0")
+def test_longest_item_0():
+    run_ok_test("test_ses03_solution_longest_item_0")
 
-def test_weeks_1():
-    run_ok_test("test_ses02_solution_weeks_1")
+def test_longest_item_1():
+    run_ok_test("test_ses03_solution_longest_item_1")
 
-def test_weeks_2():
-    run_ok_test("test_ses02_solution_weeks_2")
-
-def test_weeks_3():
-    run_ok_test("test_ses02_solution_weeks_3")
+def test_longest_item_2():
+    run_ok_test("test_ses03_solution_longest_item_2")

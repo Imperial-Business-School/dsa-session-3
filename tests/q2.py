@@ -1,16 +1,16 @@
 test = {
-  'name': 'Functions',
+  'name': 'For loops',
   'points': 0,
   'suites': [
     {
       'cases': [
         {
           'code': r"""
-          >>> def mult(x, y):
-          ...     product = x * y
-          ...     return product
-          >>> mult(5,2)
-          7bc1af92c3e7befb4cd41f7fc6eb55a3
+          >>> temp = 0
+          >>> for i in range(5):
+          ...     temp += 2
+          >>> print(temp)
+          099927c5ca4bdf1df665b749f6535119
           # locked
           """,
           'hidden': False,
@@ -18,30 +18,14 @@ test = {
         },
         {
           'code': r"""
-          >>> def some_printing(text):
-          ...     if text == 'hey':
-          ...         print(text)
-          ...     else:
-          ...         print('hello')
-          >>> some_printing('hi')
-          5cd82957fdc0f723ad2c97bdca6ffb50
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        }
-      ],
-      'scored': False,
-      'type': 'wwpp'
-    },
-    {
-      'cases': [
-        {
-          'code': r"""
-          >>> def return_one(): # If there is an error, type Error
-          ...     return 1
-          >>> return_one()
-          6bbf77c4f4c29b992b7452b251b86eba
+          >>> cnt1 = 0
+          >>> cnt2 = 0
+          >>> for i in range(2):
+          ...     cnt1 += 1
+          ...     for j in range(3):
+          ...         cnt2 += 1
+          >>> print(cnt1, cnt2)
+          8b46079f253174c21dd80382e57d59ad
           # locked
           """,
           'hidden': False,
@@ -49,110 +33,16 @@ test = {
         },
         {
           'code': r"""
-          >>> return_one() + 1 # return_one works as in the previous case
-          d2b32fc9fa05bf74e7c6bd7e3a7ffdf4
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        },
-        {
-          'code': r"""
-          >>> return_one + 1 # If there's an error, type Error
-          d3f6a67fafa33466c062dafdcbea2119
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        },
-        {
-          'code': r"""
-          >>> type(return_one)
-          340e32ba47bd0a2a89a78ffc535c7bb8
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        },
-        {
-          'code': r"""
-          >>> type(return_one())
-          d8739ff76b14cbb949bfd9e2ca087336
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        },
-        {
-          'code': r"""
-          >>> def print_one(): # If there is an error, type Error
-          ...     print(1)
-          ...     return 1
-          >>> z = print_one()
-          >>> print(z)
-          6bbf77c4f4c29b992b7452b251b86eba
-          6bbf77c4f4c29b992b7452b251b86eba
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        },
-        {
-          'code': r"""
-          >>> def print_one(): # If there is an error, type Error
-          ...     print(1)
-          ...     return 1
-          >>> print(print_one())
-          6bbf77c4f4c29b992b7452b251b86eba
-          6bbf77c4f4c29b992b7452b251b86eba
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        },
-        {
-          'code': r"""
-          >>> def print_one(): # If there is an error, type Error
-          ...     print(1)
-          ...     return None
-          >>> z = print_one()
-          >>> print(z)
-          6bbf77c4f4c29b992b7452b251b86eba
-          5a9a47fe60704392d8d7d94a2a818bcc
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        },
-        {
-          'code': r"""
-          >>> def print_one(): # If there is an error, type Error
-          ...     print(1)
-          >>> z = print_one()
-          >>> print(z)
-          6bbf77c4f4c29b992b7452b251b86eba
-          5a9a47fe60704392d8d7d94a2a818bcc
-          # locked
-          """,
-          'hidden': False,
-          'locked': True
-        }
-      ],
-      'scored': False,
-      'type': 'wwpp'
-    },
-    {
-      'cases': [
-        {
-          'code': r"""
-          >>> def go(n):
-          ...     while n > 0:
-          ...         print(n)
-          ...         n = n // 2
-          >>> go(4)  # If this loops forever, type Infinite Loop.  If it produces an error, write Error. If it displays nothing, write Nothing
-          875f61c850489bb83ba79afffd84ec87
-          d2b32fc9fa05bf74e7c6bd7e3a7ffdf4
-          6bbf77c4f4c29b992b7452b251b86eba
+          >>> def loop_fun(n):
+          ...     x = n
+          ...     for i in range(n):
+          ...         y = 0         
+          ...         for j in range(n):
+          ...             y += x
+          ...         x += y
+          ...     return x
+          >>> loop_fun(2)
+          9b0009928af883f16c0c9ddf06968076
           # locked
           """,
           'hidden': False,
