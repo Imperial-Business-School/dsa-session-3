@@ -9,10 +9,10 @@
     "git.rebaseWhenSync": true,
     "terminal.integrated.ignoreProcessKeybindingWarnings": true,
     "files.exclude": {
-      "**/.github": true,
-      "**/.devcontainer": true,
-      ".gitignore": true,
-      "**/tests": true
+      "**/.github": false,
+      "**/.devcontainer": false,
+      ".gitignore": false,
+      "**/tests": false
     }
   },
   "extensions": [
